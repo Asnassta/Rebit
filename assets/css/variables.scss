@@ -1,0 +1,23 @@
+$ff: 'Montserrat', sans-serif;
+$lh: 1.5;
+$wh: #ffffff;
+$bl: rgb(41, 41, 46);
+$gray: rgb(105, 105, 105);
+$red: rgb(185, 8, 8);
+$dred: rgb(110, 3, 3);
+$b-r: 60px;
+
+@mixin center-pos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+$maxWidth: 1920;
+@mixin adaptive-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}

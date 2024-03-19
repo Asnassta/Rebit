@@ -1,0 +1,112 @@
+/*=========Form===========*/
+.form {
+	&__item {
+		margin-bottom: 20px;
+	}
+	&__description {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 500;
+		color: $wh;
+		line-height: $lh;
+		margin-bottom: 8px;
+		&_bl {
+			color: $bl;
+		}
+		&.required {
+			position: relative;
+			&:after {
+				content: "*";
+				color: $red;
+			}
+		}
+	}
+	&__subtext {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 500;
+		color: $wh;
+		opacity: 0.5;
+		line-height: $lh;
+		a {
+			color: $wh;
+			text-decoration: underline;
+			transition: all .2s linear;
+		}
+		&_bl {
+			color: $bl;
+			a {
+				color: $bl;
+			}
+		}
+	}
+	&__input {
+		margin-bottom: 8px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		input {
+			display: block;
+			width: 100%;
+			background-color: $wh;
+			border-radius: 12px;
+			box-shadow: 0px 12px 32px 0px rgba(136, 138, 146, 0.25);
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 500;
+			color: $bl;
+			line-height: $lh;
+			padding: 20px 24px;
+			&::placeholder {
+				color: $gray;
+			}
+		}
+	}
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -20px;
+		margin-bottom: -20px;
+		>* {
+			width: calc(50% - 20px);
+			margin-left: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	&__row {
+		margin-top: 24px;
+		display: flex;
+		align-items: center;
+		margin-left: -24px;
+		>* {
+			margin-left: 24px;
+		}
+	}
+}
+/*=========/form===========*/
+
+@media(max-width: 640px) {
+	.form {
+		&__inner {
+			display: block;
+			margin-left: 0;
+			margin-bottom: 0;
+			>* {
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+		&__row {
+			display: block;
+			text-align: center;
+			margin-left: 0;
+			>* {
+				margin-left: 0;
+				margin-bottom: 24px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
