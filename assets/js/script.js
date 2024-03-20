@@ -1,18 +1,11 @@
 function tabs(n)
 {
-  $('.service  .tabs-nav a').removeClass('active');
-  $('.service  .tabs-nav a.t'+n).addClass('active');
-  $('.service  .tabs-block').fadeOut(0);
-  $('.service  .tabs-block.tab_'+n).fadeIn(222);
+  $('.tabs-nav a').removeClass('active');
+  $('.tabs-nav a.t'+n).addClass('active');
+  $('.tabs-block').fadeOut(0);
+  $('.tabs-block.tab_'+n).fadeIn(222);
 };
 
-function tabsMenu(n)
-{
-  $('.menu  .tabs-nav a').removeClass('active');
-  $('.menu  .tabs-nav a.t'+n).addClass('active');
-  $('.menu  .tabs-block').fadeOut(0);
-  $('.menu  .tabs-block.tab_'+n).fadeIn(222);
-};
 
 /*=============Dots============*/
 function position_dots()
@@ -60,12 +53,44 @@ $( document ).ready(function() {
 /*=============/dots============*/
 
 $(document).ready(function() {
-	/*========Header__dropdown=========*/
-  $(".header__link").hover(function(event) {
-    event.preventDefault();
-      $(this).find(".header__dropdown").fadeToggle(); 
-  });
+
+  $(".header__dropdown").hover(
+    function(e){
+      console.log(1);
+     }, // over
+
+);
+
+  /*========Header__dropdown=========*/
+  $(".header__link").hover(
+
+    function(event){
+      event.preventDefault();
+      
+      $(this).find(".header__dropdown").fadeIn(111); 
+      $(".menu__link").css('background', '');
+    },
+    function(event){
+      $(this).find(".header__dropdown").fadeOut(); 
+      $(".menu__sub").hide(0);
+      console.log(3);
+    }   
+
+
+
+  );
   /*========/header__dropdown=========*/
+
+  /*===========Menu===========*/
+  $(".menu__link").hover(function (event) {
+      $('.menu__sub').hide(0);
+        name_menu = $(this).attr('data-menu');
+        event.preventDefault();
+        $(".menu__sub."+name_menu).fadeIn(0);
+        $(".menu__link").removeClass('.active');
+        $(this).addClass('.active');
+    });
+  /*===========/menu===========*/
 
   /*========Mobile-menu=========*/
   $(".burger").on("click", function(event) {
@@ -182,22 +207,6 @@ $('.works__slider').slick({
 /*==================/works__slider==========*/
 
 /*==================Clients__slider==========*/
-$('.clients__slider').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
-      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-      var i = (currentSlide ? currentSlide : 0) + 1;
-       z = 0
-      v = 0
-      if (i >= 10)
-      {
-        z = ''
-      }
-      if (slick.slideCount >= 10)
-      {
-        v = ''
-      }
-      $('.clients .card__counter').html( '<span class="i_1">'+''+ i + '</span> <span class="i_2">/</span><span class="i_3"> ' + '' + slick.slideCount+'</span>');
-  });
-
 $('.clients__slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,

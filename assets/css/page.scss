@@ -42,6 +42,7 @@
 		position: relative;
 		cursor: pointer;
 		span {
+			display: block;
 			font-family: $ff;
 			font-size: 14px;
 			font-weight: 500;
@@ -109,7 +110,7 @@
 	}
 	&__dropdown {
 		display: none;
-		padding-top: 40px;
+		padding-top: 24px;
 		position: absolute;
 		top: 100%;
 		left: 0;
@@ -177,12 +178,15 @@
 		}
 	}
 	&__sub {
-		margin-left: 20px;
-		background-color: $bl;
-		padding: 32px;
-		border-radius: 20px;
-		display: flex;
-		flex-direction: column;
+		display: none;
+		padding-left: 20px;
+		&-box {
+			background-color: $bl;
+			padding: 32px;
+			border-radius: 20px;
+			display: flex;
+			flex-direction: column;
+		}
 		a {
 			min-width: 203px;
 			font-family: $ff;
@@ -191,7 +195,7 @@
 			line-height: 1.428;
 			color: $wh;
 			padding: 12px 0;
-			margin-bottom: 24px;
+			margin-bottom: 22px;
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -215,6 +219,15 @@
 	top: 0;
 	left: 0;
 	z-index: 100;
+	.breadcrumbs {
+		padding: 0 20px;
+		* {
+			color: $bl;
+			&:after {
+				background: url("../images/arrow-min.svg") center no-repeat;
+			}
+		}
+	}
 	&__inner {
 		background-color:  rgb(248, 248, 248);
 		border-radius: 30px;
