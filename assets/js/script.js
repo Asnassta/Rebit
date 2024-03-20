@@ -160,22 +160,6 @@ $(document).ready(function() {
 
   /*=================Sliders===================*/
 /*==================Intro__slider==========*/
-/*$('.intro__slider').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
-      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-      var i = (currentSlide ? currentSlide : 0) + 1;
-       z = 0
-      v = 0
-      if (i >= 10)
-      {
-        z = ''
-      }
-      if (slick.slideCount >= 10)
-      {
-        v = ''
-      }
-      $('.intro .card__counter').html( '<span class="i_1">'+''+ i + '</span> <span class="i_2">/</span><span class="i_3"> ' + '' + slick.slideCount+'</span>');
-  });*/
-
 $('.intro__slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -187,22 +171,6 @@ $('.intro__slider').slick({
 /*==================/intro__slider==========*/
 
 /*==================Works__slider==========*/
-$('.works__slider').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
-      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-      var i = (currentSlide ? currentSlide : 0) + 1;
-       z = 0
-      v = 0
-      if (i >= 10)
-      {
-        z = ''
-      }
-      if (slick.slideCount >= 10)
-      {
-        v = ''
-      }
-      $('.works .card__counter').html( '<span class="i_1">'+''+ i + '</span> <span class="i_2">/</span><span class="i_3"> ' + '' + slick.slideCount+'</span>');
-  });
-
 $('.works__slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,

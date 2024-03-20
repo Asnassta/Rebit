@@ -63,12 +63,15 @@
 	}
 	&__items {
 		display: flex;
-		margin-right: 32px;
+		margin-right: 20px;
 	}
 	&__item {
 		display: inline-flex;
 		align-items: center;
-		margin-right: 36px;
+		margin-right: 12px;
+		border-radius: 12px;
+		padding: 16px 24px;
+		transition: all .2s linear;
 		&:last-child {
 			margin-right: 0;
 		}
@@ -78,6 +81,7 @@
 			fill: none;
 			stroke: $bl;
 			margin-right: 6px;
+			transition: all .2s linear;
 		}
 		span {
 			font-family: $ff;
@@ -85,6 +89,16 @@
 			font-weight: 500;
 			line-height: 1.428;
 			color: $gray;
+			transition: all .2s linear;
+		}
+		&:hover {
+			background-color: $bl;
+			span {
+				color: $wh;
+			}
+			svg {
+				stroke: $wh;
+			}
 		}
 	}
 	&__btn {
@@ -484,6 +498,30 @@
 
 @media(max-width: 1070px) {
 	.header {
+		padding-top: 0;
+		.btn {
+			display: none;
+		}
+		.container {
+			padding: 0;
+		}
+		&__logo {
+			img {
+				width: 92px;
+			}
+		}
+		&__inner {
+			width: 100%;
+			margin-right: 0;
+			border-radius: 0;
+			padding: 18px 20px;
+		}
+		&__btn {
+			margin-right: 0;
+		}
+		.call {
+			display: inline-block;
+		}
 		&__inner {
 			justify-content: space-between;
 		}
