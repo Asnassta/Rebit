@@ -2081,6 +2081,8 @@ body.hidden {
   .reviews__item_video {
     min-height: 256px; }
   .bl-box .btn, .info-box .btn {
+    width: 100%; }
+  .contact-box .btn {
     width: 100%; } }
 
 /*==============/adaptive===========*/
