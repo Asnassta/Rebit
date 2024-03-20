@@ -63,21 +63,17 @@ $(document).ready(function() {
 
   /*========Header__dropdown=========*/
   $(".header__link").hover(
-
     function(event){
       event.preventDefault();
-      
+    
       $(this).find(".header__dropdown").fadeIn(111); 
-      $(".menu__link").css('background', '');
+      $(".menu__link").removeClass('active');
     },
     function(event){
       $(this).find(".header__dropdown").fadeOut(); 
       $(".menu__sub").hide(0);
       console.log(3);
     }   
-
-
-
   );
   /*========/header__dropdown=========*/
 
@@ -87,8 +83,8 @@ $(document).ready(function() {
         name_menu = $(this).attr('data-menu');
         event.preventDefault();
         $(".menu__sub."+name_menu).fadeIn(0);
-        $(".menu__link").removeClass('.active');
-        $(this).addClass('.active');
+        $(".menu__link").removeClass('active');
+        $(this).addClass('active');
     });
   /*===========/menu===========*/
 

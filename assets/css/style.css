@@ -143,8 +143,7 @@
     padding: 22px 88px 22px 24px;
     border-radius: 12px;
     position: relative;
-    margin-bottom: 8px;
-    transition: all .2s linear; }
+    margin-bottom: 8px; }
     .menu__link:last-child {
       margin-bottom: 0; }
     .menu__link:after {
