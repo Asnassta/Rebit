@@ -372,7 +372,6 @@
     height: 1.5px;
     border-radius: 2px;
     background: #29292e;
-    transition: background .3s linear;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
