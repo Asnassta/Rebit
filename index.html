@@ -77,15 +77,15 @@
 								<div class="header__dropdown">
 									<div class="menu">
 										<div class="menu__links tabs-nav">
-											<a href="#" onclick="javascript:tabsMenu(1);return false;" class="menu__link t1">Разработка</a>
-											<a href="#" onclick="javascript:tabsMenu(2);return false;" class="menu__link t2">Сопровождение</a>
-											<a href="#" onclick="javascript:tabsMenu(3);return false;" class="menu__link t3">Продвижение</a>
-											<a href="#" onclick="javascript:tabsMenu(4);return false;" class="menu__link t4">Интеграция</a>
-											<a href="#" onclick="javascript:tabsMenu(5);return false;" class="menu__link t5">Брендинг</a>
+											<a href="#" class="menu__link" data-menu="menu-r">Разработка</a>
+											<a href="#"class="menu__link" data-menu="menu-s">Сопровождение</a>
+											<a href="#" class="menu__link" data-menu="menu-p">Продвижение</a>
+											<a href="#" class="menu__link" data-menu="menu-i">Интеграция</a>
+											<a href="#" class="menu__link" data-menu="menu-b">Брендинг</a>
 										</div>
-										<div class="tabs">
-											<div class="tabs-block tab_1">
-												<div class="menu__sub">
+										<div class="menu__col">
+											<div class="menu__sub menu-r">
+												<div class="menu__sub-box">
 													<a href="#">Интернет-магазин</a>
 													<a href="#">Сайт услуг</a>
 													<a href="#">Сайт-каталог</a>
@@ -93,35 +93,35 @@
 													<a href="#">Индивидуальные решения</a>
 												</div>
 											</div>
-											<div class="tabs-block tab_2">
-												<div class="menu__sub">
+											<div class="menu__sub menu-s">
+												<div class="menu__sub-box">
+													<a href="#">Сайт-каталог</a>
+													<a href="#">Лендинг</a>
+													<a href="#">Индивидуальные решения</a>
 													<a href="#">Интернет-магазин</a>
 													<a href="#">Сайт услуг</a>
+												</div>
+											</div>
+											<div class="menu__sub menu-p">
+												<div class="menu__sub-box">
+													<a href="#">Сайт услуг</a>
 													<a href="#">Сайт-каталог</a>
+													<a href="#">Лендинг</a>
+													<a href="#">Интернет-магазин</a>
+													<a href="#">Индивидуальные решения</a>
+												</div>
+											</div>
+											<div class="menu__sub menu-i">
+												<div class="menu__sub-box">
+													<a href="#">Сайт-каталог</a>
+													<a href="#">Интернет-магазин</a>
+													<a href="#">Сайт услуг</a>
 													<a href="#">Лендинг</a>
 													<a href="#">Индивидуальные решения</a>
 												</div>
 											</div>
-											<div class="tabs-block tab_3">
-												<div class="menu__sub">
-													<a href="#">Интернет-магазин</a>
-													<a href="#">Сайт услуг</a>
-													<a href="#">Сайт-каталог</a>
-													<a href="#">Лендинг</a>
-													<a href="#">Индивидуальные решения</a>
-												</div>
-											</div>
-											<div class="tabs-block tab_4">
-												<div class="menu__sub">
-													<a href="#">Интернет-магазин</a>
-													<a href="#">Сайт услуг</a>
-													<a href="#">Сайт-каталог</a>
-													<a href="#">Лендинг</a>
-													<a href="#">Индивидуальные решения</a>
-												</div>
-											</div>
-											<div class="tabs-block tab_5">
-												<div class="menu__sub">
+											<div class="menu__sub menu-b">
+												<div class="menu__sub-box">
 													<a href="#">Интернет-магазин</a>
 													<a href="#">Сайт услуг</a>
 													<a href="#">Сайт-каталог</a>
@@ -249,45 +249,45 @@
 				</div>
 				<div class="mobile-menu__contacts">
 					<div class="contact__card">
-								<div class="contact__description">Обсудить проект</div>
-								<a href="mailto:email@example.com" class="contact__link">email@example.com</a>
-								<a href="tel:+70000000000" class="contact__link">+7 000 000 00 00</a>
-								<div class="contact__icons">
-									<a href="#" class="contact__icon" target="blank">
-										<svg>
-											<use xlink:href="#tg-icon"></use>
-										</svg>
-									</a>
-									<a href="#" class="contact__icon" target="blank">
-										<svg>
-											<use xlink:href="#wa-icon"></use>
-										</svg>
-									</a>
-								</div>
-								<div class="link-row">
-									<a href="#" class="link">
-										<svg>
-											<use xlink:href="#arrow-icon"></use>
-										</svg>
-										<span>Контакты</span>
-									</a>
-								</div>
-							</div>
-							<div class="contact__card">
-								<div class="contact__map">
-									<img src="assets/images/map.png" alt="">
-								</div>
-								<div class="contact__description">Наш адрес</div>
-								<a href="https://yandex.ru/maps/65/novosibirsk/house/ulitsa_voskhod_14_1/bEsYfwNhT0QFQFtvfXxwcHllYw==/?ll=82.942152%2C55.011613&z=18.72" class="contact__link" target="blank">Новосибирск, ул. Восход 14/1, оф.51, Бизнес-центр “На Восходе”</a>
-								<div class="contact__icons">
-									<a href="#" class="contact__icon" target="blank">
-										<img src="assets/images/yandex.svg" alt="">
-									</a>
-									<a href="#" class="contact__icon" target="blank">
-										<img src="assets/images/2gis.svg" alt="">
-									</a>
-								</div>
-							</div>
+						<div class="contact__description">Обсудить проект</div>
+						<a href="mailto:email@example.com" class="contact__link">email@example.com</a>
+						<a href="tel:+70000000000" class="contact__link">+7 000 000 00 00</a>
+						<div class="contact__icons">
+							<a href="#" class="contact__icon" target="blank">
+								<svg>
+									<use xlink:href="#tg-icon"></use>
+								</svg>
+							</a>
+							<a href="#" class="contact__icon" target="blank">
+								<svg>
+									<use xlink:href="#wa-icon"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="link-row">
+							<a href="#" class="link">
+								<svg>
+									<use xlink:href="#arrow-icon"></use>
+								</svg>
+								<span>Контакты</span>
+							</a>
+						</div>
+					</div>
+					<div class="contact__card">
+						<div class="contact__map">
+							<img src="assets/images/map.png" alt="">
+						</div>
+						<div class="contact__description">Наш адрес</div>
+						<a href="https://yandex.ru/maps/65/novosibirsk/house/ulitsa_voskhod_14_1/bEsYfwNhT0QFQFtvfXxwcHllYw==/?ll=82.942152%2C55.011613&z=18.72" class="contact__link" target="blank">Новосибирск, ул. Восход 14/1, оф.51, Бизнес-центр “На Восходе”</a>
+						<div class="contact__icons">
+							<a href="#" class="contact__icon" target="blank">
+								<img src="assets/images/yandex.svg" alt="">
+							</a>
+							<a href="#" class="contact__icon" target="blank">
+								<img src="assets/images/2gis.svg" alt="">
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</header><!--/header-->
@@ -1561,163 +1561,295 @@
 				<div class="container">
 					<div class="clients__box">
 						<h2 class="title title_bl">Нам доверяют</h2>
-						<div class="clients__flex">
-							<div class="card">
-								<div class="card__wrapper">
-									<div class="card__counter">
-										<span>1</span>
-										<span>/</span>
-										<span>6</span>
+						<div class="clients__slider">
+							<div class="clients__slide">
+								<div class="clients__flex">
+									<div class="card">
+										<div class="card__wrapper">
+											<div class="card__counter">
+												<span>1</span>
+												<span>/</span>
+												<span>6</span>
+											</div>
+											<div class="card__title">Более 50 клиентов, которые доверяют нам</div>
+											<div class="slider-arrows">
+												<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+													<svg>
+														<use xlink:href="#arrow-min-icon"></use>
+													</svg>
+												</div>
+												<div class="slider-arrows__arrow slider-arrows__arrow_next">
+													<svg>
+														<use xlink:href="#arrow-min-icon"></use>
+													</svg>
+												</div>
+											</div><!--/slider-arrows-->
+										</div>
+									</div><!--/card-->
+									<div class="clients__inner">
+										<div class="clients__links">
+											<a href="https://lashkate.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_1.png" alt="">
+											</a>
+											<a href="https://m-masel.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_2.png" alt="">
+											</a>
+											<a href="https://dient.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_3.png" alt="">
+											</a>
+											<a href="https://new.obuvsem.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_4.png" alt="">
+											</a>
+											<a href="https://sibservice54.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_5.png" alt="">
+											</a>
+											<a href="https://nzhk-instrument.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_6.png" alt="">
+											</a>
+										</div>
 									</div>
-									<div class="card__title">Более 50 клиентов, которые доверяют нам</div>
-									<div class="slider-arrows">
-										<div class="slider-arrows__arrow slider-arrows__arrow_prev">
-											<svg>
-												<use xlink:href="#arrow-min-icon"></use>
-											</svg>
-										</div>
-										<div class="slider-arrows__arrow slider-arrows__arrow_next">
-											<svg>
-												<use xlink:href="#arrow-min-icon"></use>
-											</svg>
-										</div>
-									</div><!--/slider-arrows-->
 								</div>
-							</div><!--/card-->
-							<div class="clients__slider">
-								<div class="clients__slide">
+							</div><!--/clients__slide-->
+							<div class="clients__slide">
+								<div class="clients__flex">
+									<div class="card">
+										<div class="card__wrapper">
+											<div class="card__counter">
+												<span>2</span>
+												<span>/</span>
+												<span>6</span>
+											</div>
+											<div class="card__title">Более 50 клиентов, которые доверяют нам</div>
+											<div class="slider-arrows">
+												<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+													<svg>
+														<use xlink:href="#arrow-min-icon"></use>
+													</svg>
+												</div>
+												<div class="slider-arrows__arrow slider-arrows__arrow_next">
+													<svg>
+														<use xlink:href="#arrow-min-icon"></use>
+													</svg>
+												</div>
+											</div><!--/slider-arrows-->
+										</div>
+									</div><!--/card-->
 									<div class="clients__inner">
-										<a href="https://lashkate.ru/" class="clients__item" target="blank">
-											<img src="assets/images/clients_1.png" alt="">
-										</a>
-										<a href="https://m-masel.ru/" class="clients__item" target="blank">
-											<img src="assets/images/clients_2.png" alt="">
-										</a>
-										<a href="https://dient.ru/" class="clients__item" target="blank">
-											<img src="assets/images/clients_3.png" alt="">
-										</a>
-										<a href="https://new.obuvsem.ru/" class="clients__item" target="blank">
-											<img src="assets/images/clients_4.png" alt="">
-										</a>
-										<a href="https://sibservice54.ru/" class="clients__item" target="blank">
-											<img src="assets/images/clients_5.png" alt="">
-										</a>
-										<a href="https://nzhk-instrument.ru/" class="clients__item" target="blank">
-											<img src="assets/images/clients_6.png" alt="">
-										</a>
+										<div class="clients__links">
+											<a href="https://lashkate.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_1.png" alt="">
+											</a>
+											<a href="https://m-masel.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_2.png" alt="">
+											</a>
+											<a href="https://dient.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_3.png" alt="">
+											</a>
+											<a href="https://new.obuvsem.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_4.png" alt="">
+											</a>
+											<a href="https://sibservice54.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_5.png" alt="">
+											</a>
+											<a href="https://nzhk-instrument.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_6.png" alt="">
+											</a>
+										</div>
 									</div>
-								</div><!--/clients__slide-->
-								<div class="clients__slide">
+								</div>
+							</div><!--/clients__slide-->
+							<div class="clients__slide">
+								<div class="clients__flex">
+									<div class="card">
+										<div class="card__wrapper">
+											<div class="card__counter">
+												<span>3</span>
+												<span>/</span>
+												<span>6</span>
+											</div>
+											<div class="card__title">Более 50 клиентов, которые доверяют нам</div>
+											<div class="slider-arrows">
+												<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+													<svg>
+														<use xlink:href="#arrow-min-icon"></use>
+													</svg>
+												</div>
+												<div class="slider-arrows__arrow slider-arrows__arrow_next">
+													<svg>
+														<use xlink:href="#arrow-min-icon"></use>
+													</svg>
+												</div>
+											</div><!--/slider-arrows-->
+										</div>
+									</div><!--/card-->
 									<div class="clients__inner">
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_4.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_5.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_6.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_3.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_2.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_1.png" alt="">
-										</a>
+										<div class="clients__links">
+											<a href="https://lashkate.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_1.png" alt="">
+											</a>
+											<a href="https://m-masel.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_2.png" alt="">
+											</a>
+											<a href="https://dient.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_3.png" alt="">
+											</a>
+											<a href="https://new.obuvsem.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_4.png" alt="">
+											</a>
+											<a href="https://sibservice54.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_5.png" alt="">
+											</a>
+											<a href="https://nzhk-instrument.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_6.png" alt="">
+											</a>
+										</div>
 									</div>
-								</div><!--/clients__slide-->
-								<div class="clients__slide">
+								</div>
+							</div><!--/clients__slide-->
+							<div class="clients__slide">
+								<div class="clients__flex">
+									<div class="card">
+										<div class="card__wrapper">
+											<div class="card__counter">
+												<span>4</span>
+												<span>/</span>
+												<span>6</span>
+											</div>
+											<div class="card__title">Более 50 клиентов, которые доверяют нам</div>
+											<div class="slider-arrows">
+												<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+													<svg>
+														<use xlink:href="#arrow-min-icon"></use>
+													</svg>
+												</div>
+												<div class="slider-arrows__arrow slider-arrows__arrow_next">
+													<svg>
+														<use xlink:href="#arrow-min-icon"></use>
+													</svg>
+												</div>
+											</div><!--/slider-arrows-->
+										</div>
+									</div><!--/card-->
 									<div class="clients__inner">
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_1.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_2.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_3.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_4.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_5.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_6.png" alt="">
-										</a>
+										<div class="clients__links">
+											<a href="https://lashkate.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_1.png" alt="">
+											</a>
+											<a href="https://m-masel.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_2.png" alt="">
+											</a>
+											<a href="https://dient.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_3.png" alt="">
+											</a>
+											<a href="https://new.obuvsem.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_4.png" alt="">
+											</a>
+											<a href="https://sibservice54.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_5.png" alt="">
+											</a>
+											<a href="https://nzhk-instrument.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_6.png" alt="">
+											</a>
+										</div>
 									</div>
-								</div><!--/clients__slide-->
-								<div class="clients__slide">
+								</div>
+							</div><!--/clients__slide-->
+							<div class="clients__slide">
+								<div class="clients__flex">
+									<div class="card">
+										<div class="card__wrapper">
+											<div class="card__counter">
+												<span>5</span>
+												<span>/</span>
+												<span>6</span>
+											</div>
+											<div class="card__title">Более 50 клиентов, которые доверяют нам</div>
+											<div class="slider-arrows">
+												<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+													<svg>
+														<use xlink:href="#arrow-min-icon"></use>
+													</svg>
+												</div>
+												<div class="slider-arrows__arrow slider-arrows__arrow_next">
+													<svg>
+														<use xlink:href="#arrow-min-icon"></use>
+													</svg>
+												</div>
+											</div><!--/slider-arrows-->
+										</div>
+									</div><!--/card-->
 									<div class="clients__inner">
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_1.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_2.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_3.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_4.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_5.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_6.png" alt="">
-										</a>
+										<div class="clients__links">
+											<a href="https://lashkate.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_1.png" alt="">
+											</a>
+											<a href="https://m-masel.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_2.png" alt="">
+											</a>
+											<a href="https://dient.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_3.png" alt="">
+											</a>
+											<a href="https://new.obuvsem.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_4.png" alt="">
+											</a>
+											<a href="https://sibservice54.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_5.png" alt="">
+											</a>
+											<a href="https://nzhk-instrument.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_6.png" alt="">
+											</a>
+										</div>
 									</div>
-								</div><!--/clients__slide-->
-								<div class="clients__slide">
+								</div>
+							</div><!--/clients__slide-->
+							<div class="clients__slide">
+								<div class="clients__flex">
+									<div class="card">
+										<div class="card__wrapper">
+											<div class="card__counter">
+												<span>6</span>
+												<span>/</span>
+												<span>6</span>
+											</div>
+											<div class="card__title">Более 50 клиентов, которые доверяют нам</div>
+											<div class="slider-arrows">
+												<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+													<svg>
+														<use xlink:href="#arrow-min-icon"></use>
+													</svg>
+												</div>
+												<div class="slider-arrows__arrow slider-arrows__arrow_next">
+													<svg>
+														<use xlink:href="#arrow-min-icon"></use>
+													</svg>
+												</div>
+											</div><!--/slider-arrows-->
+										</div>
+									</div><!--/card-->
 									<div class="clients__inner">
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_4.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_5.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_6.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_3.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_2.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_1.png" alt="">
-										</a>
+										<div class="clients__links">
+											<a href="https://lashkate.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_1.png" alt="">
+											</a>
+											<a href="https://m-masel.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_2.png" alt="">
+											</a>
+											<a href="https://dient.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_3.png" alt="">
+											</a>
+											<a href="https://new.obuvsem.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_4.png" alt="">
+											</a>
+											<a href="https://sibservice54.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_5.png" alt="">
+											</a>
+											<a href="https://nzhk-instrument.ru/" class="clients__item" target="blank">
+												<img src="assets/images/clients_6.png" alt="">
+											</a>
+										</div>
 									</div>
-								</div><!--/clients__slide-->
-								<div class="clients__slide">
-									<div class="clients__inner">
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_1.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_2.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_3.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_4.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_5.png" alt="">
-										</a>
-										<a href="#" class="clients__item" target="blank">
-											<img src="assets/images/clients_6.png" alt="">
-										</a>
-									</div>
-								</div><!--/clients__slide-->
-							</div>
+								</div>
+							</div><!--/clients__slide-->
 						</div>
 					</div>
 				</div>
@@ -1725,8 +1857,8 @@
 			<section class="section section_fq">
 				<div class="container">
 					<div class="section__inner">
-						<div class="section__col-b">
-							<div class="faq bl-box">
+						<div class="faq section__col-b">
+							<div class="faq__box bl-box">
 								<div class="subtitle">Вопросы-ответы</div>
 								<h2 class="title">Популярные вопросы</h2>
 								<div class="faq__inner">
