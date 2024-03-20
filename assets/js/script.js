@@ -30,17 +30,13 @@ function position_dots()
 window.onresize = function(event) {
   position_dots();
 };
-
 $(window).resize(position_dots);
 $(window).on('resize', position_dots)
-
 $( document ).ready(function() {
   $('.intro__slider').on('init reInit afterChange', function(event, slick){
       position_dots();
   });
 });
-
-
 
 function dots()
 {
@@ -54,16 +50,14 @@ function dots()
 window.onresize = function(event) {
   dots();
 };
-
 $(window).resize(dots);
 $(window).on('load resize', dots);
-
 $( document ).ready(function() {
   $('.works__slider').on('init reInit afterChange', function(event, slick){
       dots();
   });
 });
-
+/*=============/dots============*/
 
 $(document).ready(function() {
 	/*========Header__dropdown=========*/
@@ -72,11 +66,13 @@ $(document).ready(function() {
       $(this).find(".header__dropdown").fadeToggle(); 
   });
   /*========/header__dropdown=========*/
+
   /*========Mobile-menu=========*/
   $(".burger").on("click", function(event) {
     event.preventDefault();
       if ($(window).width() <= 1080){
         $(".mobile-menu").fadeToggle(); 
+        $(".call ").fadeToggle(); 
         $(this).toggleClass('active');
         $('body').toggleClass('hidden');
     };
@@ -101,6 +97,13 @@ $(document).ready(function() {
       $(".mobile-menu__sub").fadeOut();
   });
   /*========/mobile-menu=========*/
+
+    /*========Notify=========*/
+  $(".notify .btn").on("click", function(event) {
+    event.preventDefault();
+      $(this).parent().parent().fadeOut(); 
+  });
+  /*========/notify=========*/
 
   /*========Navbox=========*/
   $(".navbox__links-drop").on("click", function(event) {

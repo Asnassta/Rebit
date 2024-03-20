@@ -1266,12 +1266,44 @@ body.hidden {
 		font-family: $ff;
 		font-size: 14px;
 		font-weight: 500;
+		line-height: 1.428;
 		color: $wh;
 		opacity: 0.5;
 		text-align: center;
 	}
 }
 /*==========/qr-box==========*/
+
+/*===========Notify========*/
+.notify {
+	position: fixed;
+	right: 32px;
+	bottom: 32px;
+	background-color: $bl;
+	box-shadow: 0px 12px 32px 0px rgba(136, 138, 146, 0.25);
+	border-radius: 12px;
+	padding: 16px 20px;
+	z-index: 30;
+	width: 41.6%;
+	max-width: 600px;
+	min-width: 200px;
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+	&__text {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 500;
+		color: $wh;
+		line-height: 1.428;
+		margin-right: 10px;
+	}
+	.btn {
+		padding: 8px 20px;
+	}
+}
+/*===========/notify========*/
 
 /*==============Adaptive===========*/
 @media(max-width: 1320px) {
@@ -1478,6 +1510,18 @@ body.hidden {
 		}
 	}
 
+	.notify {
+		width: 70%;
+		bottom: 20px;
+		right: 20px;
+		&__text {
+			font-size: 12px;
+		}
+		.btn {
+			font-size: 14px;
+		}
+	}
+
 	.card {
 		&__inner {
 			display: block;
@@ -1660,9 +1704,17 @@ body.hidden {
 			margin-top: 24px;
 		}
 	}
+	.notify {
+		width: 90%;
+		.btn {
+			margin-right: -32px;
+		}
+	}
+
 	.faq {
 		position: static;
 	}
+
 	.intro {
 		&__inner {
 			display: block;
