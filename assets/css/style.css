@@ -2429,6 +2429,8 @@ body.hidden {
       margin-left: 20px; }
   .page-nav__link {
     display: inline-flex; }
+  .article .title-medium {
+    font-weight: 600; }
   .contact-page .section__inner {
     display: flex;
     margin-left: -20px; }
