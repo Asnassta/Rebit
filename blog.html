@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<title>Rebit</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="search-icon" viewBox="0 0 20 20">
+			<g>
+				<circle cx="9.15385" cy="9.30766" r="4.15385" stroke-width="1.5"/>
+				<path d="M13.4694 15.3765C13.7623 15.6694 14.2372 15.6694 14.5301 15.3765C14.823 15.0836 14.823 14.6088 14.5301 14.3159L13.4694 15.3765ZM11.3925 13.2996L13.4694 15.3765L14.5301 14.3159L12.4532 12.239L11.3925 13.2996Z"/>
+			</g>
+		</symbol>
+		<symbol id="location-icon" viewBox="0 0 20 20">
+			<g>
+				<circle cx="10" cy="9" r="6" stroke-width="1.5" stroke-linecap="round"/>
+				<path d="M10 15V18" stroke-width="1.5" stroke-linecap="round"/>
+				<path d="M10 7V11" stroke-width="1.5" stroke-linecap="round"/>
+			</g>
+		</symbol>
+		<symbol id="user-icon" viewBox="0 0 20 20">
+			<g>
+				<circle cx="10" cy="6" r="3" stroke-width="1.5" stroke-linecap="round"/>
+				<path d="M16 17V17C16 13.6863 13.3137 11 10 11V11C6.68629 11 4 13.6863 4 17V17" stroke-width="1.5" stroke-linecap="round"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-icon" viewBox="0 0 20 20">
+			<g>
+				<path d="M5.60742 5.60645L12.6785 12.6775" stroke-width="1.5" stroke-linecap="round"/>
+				<path d="M12.6777 8.43457V12.6772H8.43509" stroke-width="1.5" stroke-linecap="round"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-min-icon" viewBox="0 0 20 23">
+			<g>
+				<path d="M8 14L12 10L8 6" stroke-width="1.5"/>
+			</g>
+		</symbol>
+		<symbol id="play-icon" viewBox="0 0 21 21">
+			<g>
+				<path d="M15 10.5L7 15.5L7 5.5L15 10.5Z" stroke-width="1.5"/>
+			</g>
+		</symbol>
+		<symbol id="close-icon" viewBox="0 0 20 20">
+			<g>
+				<path d="M5.75732 5.75739L14.2426 14.2427"  stroke-width="1.5" stroke-linecap="round"/>
+				<path d="M5.75732 14.2426L14.2426 5.75733" stroke-width="1.5" stroke-linecap="round"/>
+			</g>
+		</symbol>
+		<symbol id="tg-icon" viewBox="0 0 32 32">
+			<g>
+				<path d="M13.9644 18.0362L13.7129 21.6099C14.0727 21.6099 14.2285 21.4537 14.4153 21.2662L16.1019 19.6374L19.5967 22.2237C20.2377 22.5846 20.6893 22.3945 20.8622 21.6278L23.1561 10.7658L23.1568 10.7652C23.3601 9.80772 22.8141 9.43332 22.1897 9.6682L8.70566 14.8848C7.78541 15.2458 7.79934 15.7642 8.54923 15.999L11.9965 17.0826L20.004 12.0195C20.3808 11.7674 20.7235 11.9069 20.4416 12.1591L13.9644 18.0362Z"/>
+			</g>
+		</symbol>
+		<symbol id="wa-icon" viewBox="0 0 32 32">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9981 8.7998H16.0017C19.9717 8.7998 23.2 12.03 23.2 15.9999C23.2 19.9699 19.9717 23.2 16.0017 23.2C14.5374 23.2 13.1793 22.7644 12.0408 22.0102L9.27321 22.8949L10.1705 20.2201C9.30741 19.0348 8.7998 17.5749 8.7998 15.9999C8.7998 12.0291 12.0282 8.7998 15.9981 8.7998ZM18.7783 19.9834C19.3282 19.8646 20.0176 19.4578 20.1913 18.9673C20.365 18.4759 20.365 18.0573 20.3146 17.9682C20.2739 17.8976 20.1777 17.8512 20.034 17.7821C19.9966 17.764 19.956 17.7445 19.9123 17.7225C19.7008 17.6172 18.6721 17.1087 18.4777 17.0412C18.2869 16.9692 18.1051 16.9944 17.961 17.1978C17.9337 17.2362 17.9063 17.2746 17.8791 17.3128C17.7054 17.5572 17.5378 17.7928 17.3985 17.943C17.2716 18.078 17.0646 18.0951 16.8909 18.0231C16.872 18.0153 16.8503 18.0065 16.826 17.9967C16.5509 17.8856 15.9409 17.6392 15.2025 16.9818C14.5797 16.4274 14.1567 15.7371 14.0343 15.5301C13.9141 15.3225 14.0178 15.2007 14.1136 15.0881C14.1153 15.0861 14.1171 15.084 14.1189 15.0819C14.1807 15.0055 14.2406 14.9418 14.3008 14.8779C14.3442 14.8319 14.3877 14.7857 14.4321 14.7345C14.4387 14.7269 14.4451 14.7195 14.4514 14.7123C14.5457 14.6038 14.6019 14.5392 14.6652 14.4042C14.7372 14.2647 14.6859 14.1207 14.6346 14.0145C14.5993 13.9401 14.3813 13.4111 14.1941 12.9569C14.114 12.7626 14.0395 12.582 13.9875 12.4566C13.848 12.1227 13.7418 12.1101 13.5303 12.1011C13.5238 12.1007 13.5172 12.1004 13.5106 12.1001C13.4438 12.0967 13.3702 12.093 13.2891 12.093C13.0137 12.093 12.7266 12.174 12.5529 12.3513C12.5468 12.3575 12.5405 12.3639 12.5339 12.3706C12.3117 12.5966 11.8167 13.1 11.8167 14.1036C11.8167 15.1091 12.5301 16.0822 12.6621 16.2623C12.6657 16.2672 12.6689 16.2716 12.6717 16.2753C12.6796 16.2858 12.6946 16.3074 12.7164 16.339C12.9859 16.7293 14.2987 18.6305 16.2564 19.4416C17.9106 20.1274 18.4021 20.0635 18.7783 19.9834Z"/>
+			</g>
+		</symbol>
+	</svg>
+	<!--/sprite-->
+	
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__col">
+						<div class="burger">
+							<span class="burger__item"></span>
+						</div>
+						<a href="/" class="header__logo">
+							<img src="assets/images/logo.svg" alt="">
+						</a>
+					</div>
+					<div class="header__menu">
+						<nav class="header__nav">
+							<div class="header__link">
+								<span>Услуги</span>
+								<div class="header__dropdown">
+									<div class="menu">
+										<div class="menu__links tabs-nav">
+											<a href="#" class="menu__link" data-menu="menu-r">Разработка</a>
+											<a href="#"class="menu__link" data-menu="menu-s">Сопровождение</a>
+											<a href="#" class="menu__link" data-menu="menu-p">Продвижение</a>
+											<a href="#" class="menu__link" data-menu="menu-i">Интеграция</a>
+											<a href="#" class="menu__link" data-menu="menu-b">Брендинг</a>
+										</div>
+										<div class="menu__col">
+											<div class="menu__sub menu-r">
+												<div class="menu__sub-box">
+													<a href="#">Интернет-магазин</a>
+													<a href="#">Сайт услуг</a>
+													<a href="#">Сайт-каталог</a>
+													<a href="#">Лендинг</a>
+													<a href="#">Индивидуальные решения</a>
+												</div>
+											</div>
+											<div class="menu__sub menu-s">
+												<div class="menu__sub-box">
+													<a href="#">Сайт-каталог</a>
+													<a href="#">Лендинг</a>
+													<a href="#">Индивидуальные решения</a>
+													<a href="#">Интернет-магазин</a>
+													<a href="#">Сайт услуг</a>
+												</div>
+											</div>
+											<div class="menu__sub menu-p">
+												<div class="menu__sub-box">
+													<a href="#">Сайт услуг</a>
+													<a href="#">Сайт-каталог</a>
+													<a href="#">Лендинг</a>
+													<a href="#">Интернет-магазин</a>
+													<a href="#">Индивидуальные решения</a>
+												</div>
+											</div>
+											<div class="menu__sub menu-i">
+												<div class="menu__sub-box">
+													<a href="#">Сайт-каталог</a>
+													<a href="#">Интернет-магазин</a>
+													<a href="#">Сайт услуг</a>
+													<a href="#">Лендинг</a>
+													<a href="#">Индивидуальные решения</a>
+												</div>
+											</div>
+											<div class="menu__sub menu-b">
+												<div class="menu__sub-box">
+													<a href="#">Интернет-магазин</a>
+													<a href="#">Сайт услуг</a>
+													<a href="#">Сайт-каталог</a>
+													<a href="#">Лендинг</a>
+													<a href="#">Индивидуальные решения</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="header__link">
+								<span>Кейсы</span>
+							</a>
+							<a href="#" class="header__link">
+								<span>Контакты</span>
+							</a>
+						</nav>
+						<div class="header__items">
+							<a href="#" class="header__item">
+								<svg>
+									<use xlink:href="#location-icon"></use>
+								</svg>
+								<span>Новосибирск</span>
+							</a>
+							<a href="#" class="header__item">
+								<svg>
+									<use xlink:href="#user-icon"></use>
+								</svg>
+								<span>Войти в кабинет</span>
+							</a>
+						</div>
+					</div>
+					<div class="header__btn">
+						<a href="#" class="btn open-popup" data-popup="popup-contact">Связаться с нами</a>
+						<a href="#" class="call open-popup" data-popup="popup-contact">
+							<img src="assets//images/call.svg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="mobile-menu">
+				<div class="mobile-menu__inner">
+					<div class="mobile-menu__link">
+						<span class="mobile-menu-drop">Услуги</span>
+						<div class="mobile-menu__sub">
+							<div class="breadcrumbs">
+								<a href="#" class="menu__close">Меню</a>
+								<a href="#">Услуги</a>
+							</div>
+							<div class="mobile-menu__sublinks">
+								<div class="mobile-menu__sublink">
+									<span>Разработка</span>
+									<div class="mobile-menu__dropdown">
+										<a href="#">Интернет-магазин</a>
+										<a href="#">Сайт услуг</a>
+										<a href="#">Сайт-каталог</a>
+										<a href="#">Лендинг</a>
+										<a href="#">Индивидуальные решения</a>
+									</div>
+								</div>
+								<div class="mobile-menu__sublink">
+									<span>Сопровождение</span>
+									<div class="mobile-menu__dropdown">
+										<a href="#">Интернет-магазин</a>
+										<a href="#">Сайт услуг</a>
+										<a href="#">Сайт-каталог</a>
+										<a href="#">Лендинг</a>
+										<a href="#">Индивидуальные решения</a>
+									</div>
+								</div>
+								<div class="mobile-menu__sublink">
+									<span>Продвижение</span>
+									<div class="mobile-menu__dropdown">
+										<a href="#">Интернет-магазин</a>
+										<a href="#">Сайт услуг</a>
+										<a href="#">Сайт-каталог</a>
+										<a href="#">Лендинг</a>
+										<a href="#">Индивидуальные решения</a>
+									</div>
+								</div>
+								<div class="mobile-menu__sublink">
+									<span>Интеграция</span>
+									<div class="mobile-menu__dropdown">
+										<a href="#">Интернет-магазин</a>
+										<a href="#">Сайт услуг</a>
+										<a href="#">Сайт-каталог</a>
+										<a href="#">Лендинг</a>
+										<a href="#">Индивидуальные решения</a>
+									</div>
+								</div>
+								<div class="mobile-menu__sublink">
+									<span>Брендинг</span>
+									<div class="mobile-menu__dropdown">
+										<a href="#">Интернет-магазин</a>
+										<a href="#">Сайт услуг</a>
+										<a href="#">Сайт-каталог</a>
+										<a href="#">Лендинг</a>
+										<a href="#">Индивидуальные решения</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="mobile-menu__link">
+						<span>Кейсы</span>
+					</a>
+					<a href="#" class="mobile-menu__link">
+						<span>Контакты</span>
+					</a>
+					<div class="mobile-menu__bottom">
+						<div class="mobile-menu__item">
+							<svg>
+								<use xlink:href="#location-icon"></use>
+							</svg>
+							<span>Новосибирск</span>
+						</div>
+						<a href="#" class="mobile-menu__item">
+							<svg>
+								<use xlink:href="#user-icon"></use>
+							</svg>
+							<span>Войти в кабинет</span>
+						</a>
+					</div>
+				</div>
+				<div class="mobile-menu__contacts">
+					<div class="contact__card">
+						<div class="contact__description">Обсудить проект</div>
+						<a href="mailto:email@example.com" class="contact__link">email@example.com</a>
+						<a href="tel:+70000000000" class="contact__link">+7 000 000 00 00</a>
+						<div class="contact__icons">
+							<a href="#" class="contact__icon" target="blank">
+								<svg>
+									<use xlink:href="#tg-icon"></use>
+								</svg>
+							</a>
+							<a href="#" class="contact__icon" target="blank">
+								<svg>
+									<use xlink:href="#wa-icon"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="link-row">
+							<a href="#" class="link">
+								<svg>
+									<use xlink:href="#arrow-icon"></use>
+								</svg>
+								<span>Контакты</span>
+							</a>
+						</div>
+					</div>
+					<div class="contact__card">
+						<div class="contact__map">
+							<img src="assets/images/map.png" alt="">
+						</div>
+						<div class="contact__description">Наш адрес</div>
+						<a href="https://yandex.ru/maps/65/novosibirsk/house/ulitsa_voskhod_14_1/bEsYfwNhT0QFQFtvfXxwcHllYw==/?ll=82.942152%2C55.011613&z=18.72" class="contact__link" target="blank">Новосибирск, ул. Восход 14/1, оф.51, Бизнес-центр “На Восходе”</a>
+						<div class="contact__icons">
+							<a href="#" class="contact__icon" target="blank">
+								<img src="assets/images/yandex.svg" alt="">
+							</a>
+							<a href="#" class="contact__icon" target="blank">
+								<img src="assets/images/2gis.svg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header><!--/header-->
+		<main class="main">
+			<section class="blog section">
+				<div class="container">
+					<div class="section__inner">
+						<div class="section__col-s">
+							<div class="blog__navbox navbox">
+								<div class="breadcrumbs">
+									<a href="/">Старт </a>
+									<a href="#">Блог</a>
+								</div>
+								<h1 class="title">Блог</h1>
+								<div class="tags tags_wh">
+									<a href="#" class="tags__item">События</a>
+									<a href="#" class="tags__item">Юзабилити</a>
+									<a href="#" class="tags__item">Кейс</a>
+									<a href="#" class="tags__item">Битрикс24</a>
+									<a href="#" class="tags__item">HR, рекрутинг</a>
+									<a href="#" class="tags__item">Разработка</a>
+									<div class="tags__more">
+										<a href="#" class="tags__item">SEO-продвижение</a>
+										<a href="#" class="tags__item">Дизайн</a>
+										<a href="#" class="tags__item">Маркетинг</a>
+										<a href="#" class="tags__item">Фирменный стиль</a>
+										<a href="#" class="tags__item">SMM</a>
+										<a href="#" class="tags__item">Сопровождение</a>
+										<a href="#" class="tags__item">Контекстная реклама</a>
+									</div>
+								</div>
+								<div class="link-row">
+									<a href="#" class="link tags-more-btn">
+										<svg>
+											<use xlink:href="#arrow-min-icon"></use>
+										</svg>
+										<span>Раскрыть список</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="section__col-b">
+							<form action="#" class="search gray-box mb-20">
+								<div class="search__inner">
+									<div class="search__icon">
+										<svg>
+											<use xlink:href="#search-icon"></use>
+										</svg>
+									</div>
+									<input type="text" placeholder="Поиск">
+									<button type="submit">
+										<svg>
+											<use xlink:href="#search-icon"></use>
+										</svg>
+										<span>Поиск</span>
+									</button>
+								</div>
+							</form><!--/search-->
+							<div class="gray-box">
+								<div class="blog__slider">
+									<div class="blog__slide">
+										<div class="blog__item">
+											<div class="blog__photo">
+												<img src="assets/images/blog-photo.png" alt="">
+											</div>
+											<div class="card">
+												<div class="card__wrapper">
+													<div class="card__subtitle">Самое читаемое</div>
+													<div class="card__title">Менеджеру никто не пишет: 5 причин, по которым падает трафик на сайте</div>
+													<div class="card__row">
+														<a href="#" class="link">
+															<svg>
+																<use xlink:href="#arrow-icon"></use>
+															</svg>
+															<span>Перейти к статье</span>
+														</a>
+													</div>
+													<div class="slider-arrows">
+														<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+															<svg>
+																<use xlink:href="#arrow-min-icon"></use>
+															</svg>
+														</div>
+														<div class="slider-arrows__arrow slider-arrows__arrow_next">
+															<svg>
+																<use xlink:href="#arrow-min-icon"></use>
+															</svg>
+														</div>
+													</div><!--/slider-arrows-->
+												</div>
+											</div><!--/card-->
+										</div>
+									</div><!--/blog__slide-->
+									<div class="blog__slide">
+										<div class="blog__item">
+											<div class="blog__photo">
+												<img src="assets/images/blog-photo.png" alt="">
+											</div>
+											<div class="card">
+												<div class="card__wrapper">
+													<div class="card__subtitle">Самое читаемое</div>
+													<div class="card__title">Менеджеру никто не пишет: 5 причин, по которым падает трафик на сайте</div>
+													<div class="card__row">
+														<a href="#" class="link">
+															<svg>
+																<use xlink:href="#arrow-icon"></use>
+															</svg>
+															<span>Перейти к статье</span>
+														</a>
+													</div>
+													<div class="slider-arrows">
+														<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+															<svg>
+																<use xlink:href="#arrow-min-icon"></use>
+															</svg>
+														</div>
+														<div class="slider-arrows__arrow slider-arrows__arrow_next">
+															<svg>
+																<use xlink:href="#arrow-min-icon"></use>
+															</svg>
+														</div>
+													</div><!--/slider-arrows-->
+												</div>
+											</div><!--/card-->
+										</div>
+									</div><!--/blog__slide-->
+									<div class="blog__slide">
+										<div class="blog__item">
+											<div class="blog__photo">
+												<img src="assets/images/blog-photo.png" alt="">
+											</div>
+											<div class="card">
+												<div class="card__wrapper">
+													<div class="card__subtitle">Самое читаемое</div>
+													<div class="card__title">Менеджеру никто не пишет: 5 причин, по которым падает трафик на сайте</div>
+													<div class="card__row">
+														<a href="#" class="link">
+															<svg>
+																<use xlink:href="#arrow-icon"></use>
+															</svg>
+															<span>Перейти к статье</span>
+														</a>
+													</div>
+													<div class="slider-arrows">
+														<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+															<svg>
+																<use xlink:href="#arrow-min-icon"></use>
+															</svg>
+														</div>
+														<div class="slider-arrows__arrow slider-arrows__arrow_next">
+															<svg>
+																<use xlink:href="#arrow-min-icon"></use>
+															</svg>
+														</div>
+													</div><!--/slider-arrows-->
+												</div>
+											</div><!--/card-->
+										</div>
+									</div><!--/blog__slide-->
+								</div>
+								<div class="blog__cards">
+									<div class="blog-card">
+										<div class="blog-card__inner">
+											<div class="blog-card__photo">
+												<img src="assets/images/blog-photo.png" alt="">
+											</div>
+											<div class="blog-card__info">
+												<div class="blog-card__block">
+													<h3 class="blog-card__title">Эти офферы не работают в fashion<br> e-commerce</h3>
+													<div class="blog-card__text">
+														<p>Картинка оффера красивая, аудитория целевая, предложение приятное. В чем факап?</p>
+													</div>
+												</div>
+												<div class="tags">
+													<a href="#" class="tags__item">SMM</a>
+													<a href="#" class="tags__item">SEO-продвижение</a>
+												</div>
+											</div>
+										</div>
+										<div class="blog-card__row">
+											<a href="#" class="link">
+												<svg>
+													<use xlink:href="#arrow-icon"></use>
+												</svg>
+												<span>Перейти к статье</span>
+											</a>
+											<div class="blog-card__date">14.08.2023</div>
+										</div>
+									</div><!--/blog-card-->
+									<div class="blog-card">
+										<div class="blog-card__inner">
+											<div class="blog-card__photo">
+												<img src="assets/images/blog-photo_2.png" alt="">
+											</div>
+											<div class="blog-card__info">
+												<div class="blog-card__block">
+													<h3 class="blog-card__title">Как увеличить трафик блога на 262%</h3>
+													<div class="blog-card__text">
+														<p>К нам обратился клиент с запросом на привлечение органического трафика в блог</p>
+													</div>
+												</div>
+												<div class="tags">
+													<a href="#" class="tags__item">SMM</a>
+													<a href="#" class="tags__item">SEO-продвижение</a>
+												</div>
+											</div>
+										</div>
+										<div class="blog-card__row">
+											<a href="#" class="link">
+												<svg>
+													<use xlink:href="#arrow-icon"></use>
+												</svg>
+												<span>Перейти к статье</span>
+											</a>
+											<div class="blog-card__date">14.08.2023</div>
+										</div>
+									</div><!--/blog-card-->
+									<div class="blog-card">
+										<div class="blog-card__inner">
+											<div class="blog-card__photo">
+												<img src="assets/images/blog-photo.png" alt="">
+											</div>
+											<div class="blog-card__info">
+												<div class="blog-card__block">
+													<h3 class="blog-card__title">Эти офферы не работают в fashion<br> e-commerce</h3>
+													<div class="blog-card__text">
+														<p>Картинка оффера красивая, аудитория целевая, предложение приятное. В чем факап?</p>
+													</div>
+												</div>
+												<div class="tags">
+													<a href="#" class="tags__item">SMM</a>
+													<a href="#" class="tags__item">SEO-продвижение</a>
+												</div>
+											</div>
+										</div>
+										<div class="blog-card__row">
+											<a href="#" class="link">
+												<svg>
+													<use xlink:href="#arrow-icon"></use>
+												</svg>
+												<span>Перейти к статье</span>
+											</a>
+											<div class="blog-card__date">14.08.2023</div>
+										</div>
+									</div><!--/blog-card-->
+									<div class="ask-box">
+										<div class="ask-box__inner">
+											<div class="ask-box__col">
+												<div class="title-medium">Есть идеи для статей?</div>
+												<div class="text">Напишите нам, и мы с раскроем предложенную<br> тему в лучшем виде!</div>
+											</div>
+											<a href="#" class="btn">Написать</a>
+										</div>
+									</div><!--/ask-box-->
+									<div class="blog-card">
+										<div class="blog-card__inner">
+											<div class="blog-card__photo">
+												<img src="assets/images/blog-photo_2.png" alt="">
+											</div>
+											<div class="blog-card__info">
+												<div class="blog-card__block">
+													<h3 class="blog-card__title">Как увеличить трафик блога на 262%</h3>
+													<div class="blog-card__text">
+														<p>К нам обратился клиент с запросом на привлечение органического трафика в блог</p>
+													</div>
+												</div>
+												<div class="tags">
+													<a href="#" class="tags__item">SMM</a>
+													<a href="#" class="tags__item">SEO-продвижение</a>
+												</div>
+											</div>
+										</div>
+										<div class="blog-card__row">
+											<a href="#" class="link">
+												<svg>
+													<use xlink:href="#arrow-icon"></use>
+												</svg>
+												<span>Перейти к статье</span>
+											</a>
+											<div class="blog-card__date">14.08.2023</div>
+										</div>
+									</div><!--/blog-card-->
+									<div class="blog-card">
+										<div class="blog-card__inner">
+											<div class="blog-card__photo">
+												<img src="assets/images/blog-photo.png" alt="">
+											</div>
+											<div class="blog-card__info">
+												<div class="blog-card__block">
+													<h3 class="blog-card__title">Эти офферы не работают в fashion<br> e-commerce</h3>
+													<div class="blog-card__text">
+														<p>Картинка оффера красивая, аудитория целевая, предложение приятное. В чем факап?</p>
+													</div>
+												</div>
+												<div class="tags">
+													<a href="#" class="tags__item">SMM</a>
+													<a href="#" class="tags__item">SEO-продвижение</a>
+												</div>
+											</div>
+										</div>
+										<div class="blog-card__row">
+											<a href="#" class="link">
+												<svg>
+													<use xlink:href="#arrow-icon"></use>
+												</svg>
+												<span>Перейти к статье</span>
+											</a>
+											<div class="blog-card__date">14.08.2023</div>
+										</div>
+									</div><!--/blog-card-->
+								</div>
+								<div class="page-nav">
+									<div class="page-nav__inner">
+										<a href="#" class="page-nav__link">
+											<svg>
+												<use xlink:href="#arrow-min-icon"></use>
+											</svg>
+											<span>Перейти к первой</span>
+										</a>
+										<div class="page-nav__nums">
+											<a href="#" class="page-nav__num">1</a>
+											<a href="#" class="page-nav__num">2</a>
+											<a href="#" class="page-nav__num">3</a>
+											<a href="#" class="page-nav__num">4</a>
+											<a href="#" class="page-nav__num">5</a>
+											<a href="#" class="page-nav__num">...</a>
+										</div>
+										<a href="#" class="page-nav__link">
+											<span>Перейти к последней</span>
+											<svg>
+												<use xlink:href="#arrow-min-icon"></use>
+											</svg>
+										</a>
+									</div>
+									<div class="page-nav__arrows">
+										<div class="slider-arrows">
+											<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+												<svg>
+													<use xlink:href="#arrow-min-icon"></use>
+												</svg>
+											</div>
+											<div class="slider-arrows__arrow slider-arrows__arrow_next">
+												<svg>
+													<use xlink:href="#arrow-min-icon"></use>
+												</svg>
+											</div>
+										</div><!--/slider-arrows-->
+									</div>
+								</div><!--/page-nav-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!--/blog-->
+			<section class="contact">
+				<div class="container">
+					<div class="section__inner">
+						<div class="section__col-b bl-box">
+							<div class="subtitle">Контакты</div>
+							<h2 class="title mb-24">Время обменяться контактами</h2>
+							<form action="#" class="form">
+								<div class="form__inner">
+									<div class="form__item">
+										<div class="form__description required">Ваше имя</div>
+										<div class="form__input">
+											<input type="text" placeholder="Николай">
+										</div>
+									</div><!--/form__item-->
+									<div class="form__item">
+										<div class="form__description">Эл.почта</div>
+										<div class="form__input">
+											<input type="text" placeholder="example@example.com">
+										</div>
+									</div><!--/form__item-->
+									<div class="form__item">
+										<div class="form__description required">Номер телефона</div>
+										<div class="form__input">
+											<input type="text" placeholder="+7 ( _ _ _ ) _ _ _  _ _  _ _">
+										</div>
+									</div><!--/form__item-->
+									<div class="form__item">
+										<div class="form__description">Название компании</div>
+										<div class="form__input">
+											<input type="text" placeholder="OOO Example">
+										</div>
+									</div><!--/form__item-->
+								</div>
+								<div class="form__row">
+									<button class="btn" type="submit">Отправить</button>
+									<div class="form__subtext">Нажимая на кнопку “Отправить”, я даю свое согласие на обработку <a href="#">персональных данных</a></div>
+								</div>
+							</form>
+							<div class="link-row">
+								<div class="link-description">Либо вы можете заполнить бриф для оценки будущего проекта</div>
+								<a href="#" class="link">
+									<svg>
+										<use xlink:href="#arrow-icon"></use>
+									</svg>
+									<span>Заполнить бриф</span>
+								</a>
+							</div>
+						</div>
+						<div class="section__col-s gray-box">
+							<div class="contact__card">
+								<div class="contact__description">Обсудить проект</div>
+								<a href="mailto:email@example.com" class="contact__link">email@example.com</a>
+								<a href="tel:+70000000000" class="contact__link">+7 000 000 00 00</a>
+								<div class="contact__icons">
+									<a href="#" class="contact__icon" target="blank">
+										<svg>
+											<use xlink:href="#tg-icon"></use>
+										</svg>
+									</a>
+									<a href="#" class="contact__icon" target="blank">
+										<svg>
+											<use xlink:href="#wa-icon"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="link-row">
+									<a href="#" class="link">
+										<svg>
+											<use xlink:href="#arrow-icon"></use>
+										</svg>
+										<span>Контакты</span>
+									</a>
+								</div>
+							</div>
+							<div class="contact__card">
+								<div class="contact__map">
+									<img src="assets/images/map.png" alt="">
+								</div>
+								<div class="contact__description">Наш адрес</div>
+								<a href="https://yandex.ru/maps/65/novosibirsk/house/ulitsa_voskhod_14_1/bEsYfwNhT0QFQFtvfXxwcHllYw==/?ll=82.942152%2C55.011613&z=18.72" class="contact__link" target="blank">Новосибирск, ул. Восход 14/1, оф.51, Бизнес-центр “На Восходе”</a>
+								<div class="contact__icons">
+									<a href="#" class="contact__icon" target="blank">
+										<img src="assets/images/yandex.svg" alt="">
+									</a>
+									<a href="#" class="contact__icon" target="blank">
+										<img src="assets/images/2gis.svg" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!--/contact-->
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__links">
+						<a href="#">Политика конфиденциальности</a>
+						<a href="#">Персональные данные</a>
+					</div>
+					<div class="footer__copyrigth">Copyright © 2023 ReBit. Все права защищены.</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="popup popup-contact">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<span class="popup__close">
+				<svg>
+					<use xlink:href="#close-icon"></use>
+				</svg>
+			</span>
+			<div class="popup__box">
+				<div class="popup__content">
+					<div class="contact-box">
+						<div class="contact-box__col">
+							<h2 class="title title_bl mb-24">Связаться с нами</h2>
+							<form action="#" class="form">
+								<div class="form__item mb-16">
+									<div class="form__description form__description_bl required">Ваше имя</div>
+									<div class="form__input">
+										<input type="text" placeholder="Николай">
+									</div>
+								</div>
+								<div class="form__item mb-24">
+									<div class="form__description form__description_bl required">Номер телефона</div>
+									<div class="form__input">
+										<input type="text" placeholder="+7 ( _ _ _ ) _ _ _  _ _  _ _">
+									</div>
+									<div class="form__subtext form__subtext_bl">Нажимая на кнопку “Отправить”, я даю свое согласие на обработку персональных данных</div>
+								</div>
+								<button type="submit" class="btn">Отправить</button>
+							</form>
+						</div>
+						<div class="contact-box__col">
+							<div class="qr-box">
+								<h2 class="title">Написать нам в WhatsApp</h2>
+								<div class="qr-box__code">
+									<img src="assets/images/qr-code.svg" alt="">
+								</div>
+								<div class="qr-box__description">Вы можете отсканировать qr-код на экране, чтобы написать нам в WhatsApp</div>
+							</div>
+						</div>
+					</div>
+				</div>
+    	    </div>
+		</div>
+	</div><!--/popup-contact-->
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -8,35 +8,12 @@ function tabs(n)
 
 
 /*=============Dots============*/
-function position_dots()
-{
-    var $el = $('.slick-active .card'),
-    $main = $('.intro__visual')
-    winScrollTop = $(window).scrollTop()
-    mainYPos = $main.offset().top - winScrollTop
-    elYPos = $el.offset().top - winScrollTop
-    elYTruePos = elYPos - mainYPos
-    parentHeight = $('.intro__visual').height();
-    $('.intro .slick-dots').css('bottom', parentHeight-elYTruePos+24+'px');
-}
-
-window.onresize = function(event) {
-  position_dots();
-};
-$(window).resize(position_dots);
-$(window).on('resize', position_dots)
-$( document ).ready(function() {
-  $('.intro__slider').on('init reInit afterChange', function(event, slick){
-      position_dots();
-  });
-});
-
 function dots()
 {
-    let $eh = $('.works .slick-active .card').height();
-    $('.works .slick-dots').css('bottom', $eh+84+'px');
+    let $eh = $('.intro .slick-active .card').height();
+    $('.intro .slick-dots').css('bottom', $eh+84+'px');
     if ($(window).width() <= 1320){
-        $('.works .slick-dots').css('bottom', $eh+44+'px');  
+        $('.intro .slick-dots').css('bottom', $eh+44+'px');  
     };
 }
 
@@ -46,8 +23,28 @@ window.onresize = function(event) {
 $(window).resize(dots);
 $(window).on('load resize', dots);
 $( document ).ready(function() {
-  $('.works__slider').on('init reInit afterChange', function(event, slick){
+  $('.intro__slider').on('init reInit afterChange', function(event, slick){
       dots();
+  });
+});
+
+function dotsW()
+{
+    let $eh = $('.works .slick-active .card').height();
+    $('.works .slick-dots').css('bottom', $eh+84+'px');
+    if ($(window).width() <= 1320){
+        $('.works .slick-dots').css('bottom', $eh+44+'px');  
+    };
+}
+
+window.onresize = function(event) {
+  dotsW();
+};
+$(window).resize(dotsW);
+$(window).on('load resize', dotsW);
+$( document ).ready(function() {
+  $('.works__slider').on('init reInit afterChange', function(event, slick){
+      dotsW();
   });
 });
 /*=============/dots============*/
@@ -65,7 +62,6 @@ $(document).ready(function() {
   $(".header__link").hover(
     function(event){
       event.preventDefault();
-    
       $(this).find(".header__dropdown").fadeIn(111); 
       $(".menu__link").removeClass('active');
     },
@@ -153,6 +149,14 @@ $(document).ready(function() {
   });
   /*========/service__more=========*/
 
+  /*========Tags__more=========*/
+  $(".tags-more-btn").on("click", function(event) {
+    event.preventDefault();
+      $(this).parents().find('.tags__more').slideToggle(); 
+      $(this).toggleClass('active'); 
+  });
+  /*========/tags__more=========*/
+
   /*========FAQ=========*/
   $(".faq__question").on("click", function(event) {
     event.preventDefault();
@@ -212,6 +216,16 @@ $('.clients__slider').slick({
   nextArrow: $('.clients .slider-arrows__arrow_next'),
   });
 /*==================/clients__slider==========*/
+
+/*==================Blog__slider==========*/
+$('.blog__slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  fade: true,
+  prevArrow: $('.blog .slider-arrows__arrow_prev'),
+  nextArrow: $('.blog .slider-arrows__arrow_next'),
+  });
+/*==================/blog__slider==========*/
  /*=================Sliders===================*/
 
 });

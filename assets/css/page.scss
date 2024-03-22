@@ -51,11 +51,18 @@
 			border-radius: 12px;
 			padding: 16px 24px;
 			transition: all .3s linear;
+			cursor: pointer;
 		}
 		&:last-child {
 			margin-right: 0;
 		}
 		&:hover {
+			span {
+				color: $wh;
+				background-color: $bl;
+			}
+		}
+		&.active {
 			span {
 				color: $wh;
 				background-color: $bl;
