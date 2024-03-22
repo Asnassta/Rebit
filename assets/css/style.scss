@@ -371,7 +371,7 @@ body.hidden {
 }
 
 .breadcrumbs {
-	margin-bottom: 20px;
+	margin-bottom: 8px;
 	* {
 		font-family: $ff;
 		font-size: 14px;
@@ -1712,13 +1712,13 @@ body.hidden {
 		color: $wh;
 		line-height: 1.428;
 		opacity: .5;
-		margin-bottom: 16px;
+		margin-bottom: 12px;
 	}
 	&__block {
 		margin-bottom: 16px;
 		margin-left: -20px;
 		&:last-child {
-			margin-bottom: 0;
+			margin-bottom: -12px;
 		}
 		>* {
 			margin-left: 20px;
@@ -1735,7 +1735,7 @@ body.hidden {
 		transition: all .2s linear;
 		color: $wh;
 		&:last-child {
-			margin-bottom: 0;
+			//margin-bottom: 0;
 		}
 		svg {
 			width: 32px;
@@ -1777,9 +1777,9 @@ body.hidden {
 		max-width: 305px;
 		min-width: 256px;
 		position: absolute;
-		top: 152px;
+		top: 136px;
 		left: 50%;
-		transform: translateX(-50.5%);
+		transform: translateX(-52.1%);
 		z-index: 1;
 		&:before {
 			content: "";
@@ -2586,7 +2586,7 @@ body.hidden {
 
 	.map {
 		.contact__card {
-			top: 120px;
+			top: 115px;
 		}
 	}
 }
