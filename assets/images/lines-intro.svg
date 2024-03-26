@@ -1,0 +1,28 @@
+<svg width="1320" height="720" viewBox="0 0 1320 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_944_9666" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1320" height="720">
+<rect width="1320" height="720" rx="60" transform="matrix(-1 0 0 1 1320 0)" fill="url(#paint0_radial_944_9666)"/>
+</mask>
+<g mask="url(#mask0_944_9666)">
+<path d="M-31 110H1350" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M-31 235H1350" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M-31 360H1350" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M-31 485H1350" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M-31 610H1350" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M98 -20V747.5" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M223 -20V747.5" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M348 -20V747.5" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M473 -20V747.5" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M598 -20V747.5" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M723 -20V747.5" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M848 -20V747.5" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M973 -20V747.5" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M1098 -20V747.5" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M1223 -20V747.5" stroke="#B0B0C6" stroke-linecap="round"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_944_9666" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(330 360) rotate(90) scale(360 893.779)">
+<stop stop-color="#D9D9D9" stop-opacity="0.7"/>
+<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

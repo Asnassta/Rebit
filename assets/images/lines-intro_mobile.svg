@@ -1,0 +1,22 @@
+<svg width="256" height="320" viewBox="0 0 256 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1029_15940" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="320">
+<rect width="256" height="320" rx="20" fill="url(#paint0_radial_1029_15940)"/>
+</mask>
+<g mask="url(#mask0_1029_15940)">
+<path d="M-160 54.2021H415.792" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M-160 106.319H415.792" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M-160 158.436H415.792" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M-160 210.553H415.792" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M-160 262.672H415.792" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M50.1367 0V320" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M102.254 0V320" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M154.371 0V320" stroke="#B0B0C6" stroke-linecap="round"/>
+<path d="M206.489 0V320" stroke="#B0B0C6" stroke-linecap="round"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_1029_15940" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(64 160) rotate(90) scale(160 173.339)">
+<stop stop-color="#D9D9D9" stop-opacity="0.7"/>
+<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

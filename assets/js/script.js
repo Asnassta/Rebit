@@ -54,9 +54,9 @@ $(document).ready(function() {
   $(".header__dropdown").hover(
     function(e){
       console.log(1);
-     }, // over
+     },
+  );
 
-);
 
   /*========Header__dropdown=========*/
   $(".header__link").hover(
@@ -166,6 +166,16 @@ $(document).ready(function() {
       $(".faq__question").not(this).removeClass('active');  
   });
   /*========/FAQ=========*/
+
+  /*========Tools=========*/
+  $(".tools__list-head").on("click", function(event) {
+    event.preventDefault();
+      $(this).next().slideToggle(); 
+      $(this).toggleClass('active');
+      $(".tools__list-head").not(this).next().slideUp();  
+      $(".tools__list-head").not(this).removeClass('active');  
+  });
+  /*========/tools=========*/
 
   /*===============Popup=================*/
     $(".open-popup").on("click", function (event) {
